@@ -1,19 +1,18 @@
 #include <iostream>
 using namespace std;
-
-void sum_calc(int sum,int n){
-	if(n-1>=0){
-	sum+=n;
-	sum_calc(sum,--n);
+void totalsum(int sum, int n) {
+	if (n-1 >= 0) {
+	sum += n;
+	totalsum(sum, --n);
 	}
-	else
-		cout<<"Sum equals:"<<sum;
+	else {
+		cout << "Sum= "<< sum;
+	}
 }
-
 int main() {
-	int sum=0,n;
-	cout<<"Enter your Number:";
-	cin>>n;
-	sum_calc(sum,n);
+	int sum = 0, n;
+	cout << "Enter a number: ";
+	cin >> n;
+	totalsum(sum, n);
 	return 0;
 }
