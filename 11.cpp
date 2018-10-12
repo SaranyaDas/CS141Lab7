@@ -1,21 +1,18 @@
 #include <iostream>
 #include <cmath>
 using namespace std;
-
-void gcd(int num1,int num2,int c){
-	if(num1%c==0 && num2%c==0)
-		cout<<"HCF of the 2 numbers:"<<c;
-	else	
-		gcd(num1,num2,--c);
+void GCD(int x, int y, int z) {
+	if (x%z == 0 && y%z == 0)
+		cout << "HCF/GCD of the two numbers: " << z << endl;
+	else {
+		GCD(x, y, --z);
+	}
 }
-
 int main() {
-	int num1,num2,c;
-	cout<<"Enter First Number";
-	cin>>num1;
-	cout<<"Enter Second Number";
-	cin>>num2;
-	c=min(num1,num2);
-	gcd(num1,num2,c);
+	int x, y, z;
+	cout << "Enter two numbers: ";
+	cin >> x >> y;
+	z = min(x, y);
+	GCD(x, y, z);
 	return 0;
 }
