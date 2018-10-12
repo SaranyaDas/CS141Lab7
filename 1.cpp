@@ -1,20 +1,20 @@
 #include <iostream>
 using namespace std;
-int base_d;
-void pow(int base, int index){
-		if(index<=1)
-			cout<<"Output"<<base;
-		else 
-			pow(base*base_d,--index);	
+int base1;
+void power(int base2, int index) {
+		if (index <= 1) {
+			cout << "Output: " << base << endl;
+		else { 
+			power(base1*base2,--index); << endl;
+		}
 }
-
 int main() {
-	int base,index;
-	cout<<"Enter Base";
-	cin>>base;
-	base_d=base;
-	cout<<"Enter Index";
-	cin>>index;
-	pow(base,index);
+	int base, index;
+	cout << "Enter Base:";
+	cin >> base << endl;
+	base1 = base;
+	cout << "Enter Index: ";
+	cin >> index << endl;
+	power(base, index);
 	return 0;
 }
